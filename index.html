@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Smart Ambulance AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom Scrollbar for tablet feel */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+      /* Map marker animation */
+      @keyframes pulse-ring {
+        0% { transform: scale(0.33); opacity: 1; }
+        80%, 100% { opacity: 0; }
+      }
+      .marker-pulse::before {
+        content: '';
+        position: absolute;
+        left: -8px; top: -8px;
+        height: 32px; width: 32px;
+        border-radius: 50%;
+        background-color: rgba(239, 68, 68, 0.4);
+        animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0",
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+    <script type="module" src="index.tsx"></script>
+  </head>
+  <body class="bg-slate-100 text-slate-900 overflow-hidden touch-manipulation">
+    <div id="root"></div>
+  </body>
+</html>

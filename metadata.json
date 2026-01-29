@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Smart Ambulance AI",
+  "description": "AI-powered EMS tablet interface for real-time Pre-KTAS classification, translation, and automated reporting.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}
